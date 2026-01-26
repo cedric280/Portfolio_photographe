@@ -1,0 +1,9 @@
+# Images du portfolio
+
+Placez ici vos images :
+- photographer.jpg (photo de profil)
+- portfolio images (work1.jpg, work2.jpg, etc.)
+
+Dimensions recommandées :
+- Photo de profil : 400x400px
+- Images portfolio : 800x600px ou plus

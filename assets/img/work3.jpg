@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <path d="M100 300 Q400 100 700 300 Q400 500 100 300" fill="#ff6b35" opacity="0.7"/>
+  <path d="M150 350 Q400 150 650 350 Q400 550 150 350" fill="#ffd700" opacity="0.5"/>
+  <text x="400" y="450" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold">Photographie Artistique</text>
+</svg>

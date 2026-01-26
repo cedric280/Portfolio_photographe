@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Photographe 3D</title>
+    <meta name="description" content="Portfolio professionnel d'un photographe avec expérience 3D immersive">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Préchargeur 3D -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="camera-loader">
+                <i class="fas fa-camera"></i>
+            </div>
+            <div class="loading-text">Chargement...</div>
+        </div>
+    </div>
+
+    <!-- Navigation 3D -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>PhotoArt<span>3D</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Canvas Three.js -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Section Hero 3D -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="text-reveal">Capturer</span>
+                <span class="text-reveal">l'Instant</span>
+                <span class="text-reveal accent">Parfait</span>
+            </h1>
+            <p class="hero-description">Photographe professionnel spécialisé dans les portraits, événements et photographie artistique avec une approche créative unique</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Découvrir mon travail</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <p class="section-subtitle">Passion, créativité et excellence technique</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Photographe professionnel">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>10+ années d'expérience</h3>
+                    <p>Passionné par l'art de la photographie depuis plus d'une décennie, je transforme chaque moment en œuvre d'art visuelle. Mon approche combine technique avancée et vision artistique pour créer des images qui racontent une histoire.</p>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-camera-retro"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Portrait Artistique</h4>
+                                <p>Révéler la personnalité unique de chaque sujet</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Événements</h4>
+                                <p>Immortaliser vos moments précieux</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <div class="skill-content">
+                                <h4>Paysages</h4>
+                                <p>Capturer la beauté naturelle du monde</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Portfolio 3D -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon Portfolio</h2>
+                <p class="section-subtitle">Une sélection de mes meilleurs travaux</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="wedding">Mariages</button>
+                <button class="filter-btn" data-filter="landscape">Paysages</button>
+                <button class="filter-btn" data-filter="event">Événements</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Portrait Artistique">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Portrait Artistique</h3>
+                            <p>Séance photo portrait créatif</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mariage Élégant">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Mariage Élégant</h3>
+                            <p>Capturer les moments précieux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="landscape">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Paysage Artistique">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Paysage Artistique</h3>
+                            <p>La beauté de la nature</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Portrait Mode">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Portrait Mode</h3>
+                            <p>Style et élégance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Événement Corporate">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Événement Corporate</h3>
+                            <p>Photographie professionnelle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="landscape">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Coucher de Soleil">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Coucher de Soleil</h3>
+                            <p>Magie des lumières dorées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Services</h2>
+                <p class="section-subtitle">Des prestations professionnelles adaptées à vos besoins</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Portraits Studio</h3>
+                    <p>Séances photo professionnelles en studio avec éclairage professionnel et retouches artistiques incluses.</p>
+                    <div class="service-price">À partir de 150€</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rings-wedding"></i>
+                    </div>
+                    <h3>Mariages</h3>
+                    <p>Couverture complète de votre mariage avec reportage, portraits des mariés et photos de groupe.</p>
+                    <div class="service-price">À partir de 800€</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Événements Corporate</h3>
+                    <p>Photographie d'entreprise, conférences, séminaires et événements professionnels.</p>
+                    <div class="service-price">À partir de 400€</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Reportage Photo</h3>
+                    <p>Documentation visuelle d'événements, storytelling et photojournalisme professionnel.</p>
+                    <div class="service-price">Sur devis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-moi</h2>
+                <p class="section-subtitle">Discutons de votre projet photo</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>123 Rue des Artistes<br>75001 Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@photoart3d.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nom complet</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Téléphone</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="portrait">Portrait Studio</option>
+                            <option value="wedding">Mariage</option>
+                            <option value="corporate">Événement Corporate</option>
+                            <option value="reportage">Reportage Photo</option>
+                        </select>
+                        <label for="service">Service souhaité</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 PhotoArt3D. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
