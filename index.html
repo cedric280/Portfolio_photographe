@@ -3,49 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Photographe 3D</title>
-    <meta name="description" content="Portfolio professionnel d'un photographe avec expérience 3D immersive">
+    <title>Johann Cédric | Photographe Professionnel — Ouagadougou</title>
+    <meta name="description" content="Photographe professionnel à Ouagadougou spécialisé en portraits, mariages et événements. Découvrez mon portfolio et réservez votre séance.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Préchargeur 3D -->
+
+    <!-- Préchargeur -->
     <div id="preloader">
         <div class="loader">
-            <div class="camera-loader">
-                <i class="fas fa-camera"></i>
-            </div>
+            <div class="camera-loader"><i class="fas fa-camera"></i></div>
             <div class="loading-text">Chargement...</div>
         </div>
     </div>
 
-    <!-- Navigation 3D -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h2>PhotoArt<span>3D</span></h2>
+                <h2 style="font-family: blacksword;">Art & Code <span>Studios</span></h2>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Accueil</a></li>
-                <li><a href="#about" class="nav-link">À propos</a></li>
+            <ul class="nav-menu" id="nav-menu" role="list">
+                <li><a href="#home"      class="nav-link">Accueil</a></li>
+                <li><a href="#about"     class="nav-link">À propos</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#services"  class="nav-link">Services</a></li>
+                <li><a href="#contact"   class="nav-link">Contact</a></li>
+                <li><a href="#comments"  class="nav-link">Avis</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Canvas Three.js -->
+    <!-- Canvas Three.js — fond de particules fixe -->
     <canvas id="three-canvas"></canvas>
 
-    <!-- Section Hero 3D -->
+    <!-- Section Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
@@ -56,7 +58,7 @@
             <p class="hero-description">Photographe professionnel spécialisé dans les portraits, événements et photographie artistique avec une approche créative unique</p>
             <div class="hero-buttons">
                 <a href="#portfolio" class="btn btn-primary">Découvrir mon travail</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                <a href="#contact"   class="btn btn-secondary">Me contacter</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -77,36 +79,29 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Photographe professionnel">
+                        <img src="assets/img/99b3686b-cc2f-476a-8202-142e56fd362c.jpeg" alt="Silhouette de photographe avec appareil photo">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>10+ années d'expérience</h3>
-                    <p>Passionné par l'art de la photographie depuis plus d'une décennie, je transforme chaque moment en œuvre d'art visuelle. Mon approche combine technique avancée et vision artistique pour créer des images qui racontent une histoire.</p>
+                    <p>Passionné par l'art de la photographie, je transforme chaque moment en œuvre d'art visuelle. Mon approche combine technique avancée et vision artistique pour créer des images qui racontent une histoire.</p>
                     <div class="skills">
                         <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-camera-retro"></i>
-                            </div>
+                            <div class="skill-icon"><i class="fas fa-camera-retro"></i></div>
                             <div class="skill-content">
                                 <h4>Portrait Artistique</h4>
                                 <p>Révéler la personnalité unique de chaque sujet</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
+                            <div class="skill-icon"><i class="fas fa-heart"></i></div>
                             <div class="skill-content">
                                 <h4>Événements</h4>
                                 <p>Immortaliser vos moments précieux</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-mountain"></i>
-                            </div>
+                            <div class="skill-icon"><i class="fas fa-mountain"></i></div>
                             <div class="skill-content">
                                 <h4>Paysages</h4>
                                 <p>Capturer la beauté naturelle du monde</p>
@@ -118,72 +113,53 @@
         </div>
     </section>
 
-    <!-- Section Portfolio 3D -->
+    <!-- Section Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Mon Portfolio</h2>
                 <p class="section-subtitle">Une sélection de mes meilleurs travaux</p>
             </div>
-            <div class="portfolio-filters">
+            <div class="portfolio-filters" role="group" aria-label="Filtrer par catégorie">
                 <button class="filter-btn active" data-filter="all">Tout</button>
                 <button class="filter-btn" data-filter="portrait">Portraits</button>
-                <button class="filter-btn" data-filter="wedding">Mariages</button>
-                <button class="filter-btn" data-filter="landscape">Paysages</button>
                 <button class="filter-btn" data-filter="event">Événements</button>
+                <button class="filter-btn" data-filter="landscape">Paysages</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Portrait Artistique">
+                    <img src="assets/img/portrait-lumafest.jpg" alt="Portrait événementiel - Luma Fest 2" loading="lazy">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
-                            <h3>Portrait Artistique</h3>
-                            <p>Séance photo portrait créatif</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mariage Élégant">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-content">
-                            <h3>Mariage Élégant</h3>
-                            <p>Capturer les moments précieux</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="landscape">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Paysage Artistique">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-content">
-                            <h3>Paysage Artistique</h3>
-                            <p>La beauté de la nature</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Portrait Mode">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-content">
-                            <h3>Portrait Mode</h3>
-                            <p>Style et élégance</p>
+                            <h3>Portrait Événementiel</h3>
+                            <p>Luma Fest 2 — Capturer la personnalité et l'attitude</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="event">
-                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Événement Corporate">
+                    <img src="assets/img/portrait-petro-giveback.jpg" alt="Couverture événementielle - Petro Giveback" loading="lazy">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
-                            <h3>Événement Corporate</h3>
-                            <p>Photographie professionnelle</p>
+                            <h3>Soirée Petro Giveback</h3>
+                            <p>Ambiance et complicité saisies sur le vif</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <img src="assets/img/30032026-DSC_6340-edited-2.jpg" alt="Portrait duo - Soirée Petro Giveback" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-content">
+                            <h3>Portraits de Soirée</h3>
+                            <p>Petro Giveback — Complicité et élégance saisies sur le vif</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="landscape">
-                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Coucher de Soleil">
+                    <img src="assets/img/coucher-de-soleil.jpg" alt="Coucher de soleil doré sur la savane" loading="lazy">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
                             <h3>Coucher de Soleil</h3>
-                            <p>Magie des lumières dorées</p>
+                            <p>Lumières dorées sur l'horizon — la magie de l'heure dorée</p>
                         </div>
                     </div>
                 </div>
@@ -200,33 +176,25 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-user"></i></div>
                     <h3>Portraits Studio</h3>
                     <p>Séances photo professionnelles en studio avec éclairage professionnel et retouches artistiques incluses.</p>
-                    <div class="service-price">À partir de 150€</div>
+                    <div class="service-price">À partir de 25 000 fcfa</div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rings-wedding"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-gem"></i></div>
                     <h3>Mariages</h3>
                     <p>Couverture complète de votre mariage avec reportage, portraits des mariés et photos de groupe.</p>
-                    <div class="service-price">À partir de 800€</div>
+                    <div class="service-price">À partir de 150 000 fcfa</div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
                     <h3>Événements Corporate</h3>
                     <p>Photographie d'entreprise, conférences, séminaires et événements professionnels.</p>
-                    <div class="service-price">À partir de 400€</div>
+                    <div class="service-price">À partir de 275 000 fcfa</div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-camera"></i></div>
                     <h3>Reportage Photo</h3>
                     <p>Documentation visuelle d'événements, storytelling et photojournalisme professionnel.</p>
                     <div class="service-price">Sur devis</div>
@@ -245,53 +213,48 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-details">
                             <h4>Adresse</h4>
-                            <p>ouagadougou<br>avenue thomas sankara</p>
+                            <p>Ouagadougou<br>Avenue Thomas Sankara</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-details">
                             <h4>Téléphone</h4>
                             <p>+226 77338484</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h4>Email</h4>
                             <p>johannkoudogbo@gmail.com</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61584135514956" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
                         <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required>
                         <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" name="phone">
                         <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+226 XX XX XX XX">
                     </div>
                     <div class="form-group">
+                        <label for="service">Service souhaité</label>
                         <select id="service" name="service" required>
                             <option value="">Sélectionnez un service</option>
                             <option value="portrait">Portrait Studio</option>
@@ -299,13 +262,86 @@
                             <option value="corporate">Événement Corporate</option>
                             <option value="reportage">Reportage Photo</option>
                         </select>
-                        <label for="service">Service souhaité</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
                         <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis & Commentaires -->
+    <section id="comments" class="comments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Avis & Commentaires</h2>
+                <p class="section-subtitle">Partagez votre expérience ou lisez ce que disent mes clients</p>
+            </div>
+
+            <!-- Statistiques -->
+            <div class="comments-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="avgRating">—</span>
+                    <div class="stat-stars" id="avgStars"></div>
+                    <span class="stat-label">Note moyenne</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalComments">0</span>
+                    <span class="stat-label">Avis clients</span>
+                </div>
+            </div>
+
+            <!-- Liste des commentaires -->
+            <div class="comments-list" id="commentsList">
+                <p class="no-comments" id="noComments">Soyez le premier à laisser un avis !</p>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="comment-form-wrapper">
+                <div class="comment-form-header">
+                    <h3>Laisser un avis</h3>
+                    <p>Votre expérience compte. Partagez-la avec la communauté.</p>
+                </div>
+                <form class="comment-form" id="commentForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cName">Nom <span class="required">*</span></label>
+                            <input type="text" id="cName" placeholder="Votre nom complet" required maxlength="60">
+                        </div>
+                        <div class="form-group">
+                            <label for="cService">Service utilisé</label>
+                            <select id="cService">
+                                <option value="">— Sélectionner —</option>
+                                <option value="Portrait Studio">Portrait Studio</option>
+                                <option value="Mariage">Mariage</option>
+                                <option value="Événement Corporate">Événement Corporate</option>
+                                <option value="Reportage Photo">Reportage Photo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Note <span class="required">*</span></label>
+                        <div class="star-input" id="starInput" role="group" aria-label="Choisissez une note de 1 à 5">
+                            <button type="button" class="star-btn" data-val="1" aria-label="1 étoile"><i class="fas fa-star"></i></button>
+                            <button type="button" class="star-btn" data-val="2" aria-label="2 étoiles"><i class="fas fa-star"></i></button>
+                            <button type="button" class="star-btn" data-val="3" aria-label="3 étoiles"><i class="fas fa-star"></i></button>
+                            <button type="button" class="star-btn" data-val="4" aria-label="4 étoiles"><i class="fas fa-star"></i></button>
+                            <button type="button" class="star-btn" data-val="5" aria-label="5 étoiles"><i class="fas fa-star"></i></button>
+                        </div>
+                        <input type="hidden" id="cRating" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="cMessage">Commentaire <span class="required">*</span></label>
+                        <textarea id="cMessage" rows="4" placeholder="Décrivez votre expérience..." required maxlength="500"></textarea>
+                        <span class="char-count"><span id="charCount">0</span> / 500</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Publier mon avis
+                    </button>
                 </form>
             </div>
         </div>
@@ -315,17 +351,41 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 johann cédric. Tous droits réservés.</p>
+                <div class="footer-section">
+                    <h3>Art & Code Studios</h3>
+                    <p>Photographe professionnel basé à Ouagadougou, capturant vos moments les plus précieux avec passion et créativité.</p>
                 </div>
-                <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">CGU</a>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#comments">Avis</a></li>
+                    </ul>
                 </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Ouagadougou, Avenue Thomas Sankara</p>
+                    <p>+226 77338484</p>
+                    <p>johannkoudogbo@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Johann Cédric — Art & Code Studios. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <!-- Retour en haut -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut de page">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
